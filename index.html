@@ -117,7 +117,25 @@
     }, 100);
   });
 </script>
-<!-- İçerik yerleştirilecek -->
+
+<!-- Sayfa içeriği dinamik olarak Canvas'ta üretildiğinden bu örneğe özet yerleştirildi -->
+<header>
+  <h1>Ozan Tok</h1>
+  <p>Senior Android Developer</p>
+</header>
+
+<section>
+  <details class="accordion" open>
+    <summary data-en="📌 About Me" data-tr="📌 Hakkımda">📌 About Me</summary>
+    <div class="accordion-content">
+      <p data-en="Hi, I'm Ozan Tok. I have been developing Android applications professionally for over 6 years..."
+         data-tr="Merhaba, ben Ozan Tok. Yaklaşık 6 yıldır profesyonel olarak Android uygulamaları geliştiriyorum...">
+        Hi, I'm Ozan Tok. I have been developing Android applications professionally for over 6 years...
+      </p>
+    </div>
+  </details>
+</section>
+
 <script>
   const toggle = document.getElementById('languageToggle');
   function updateLanguage(lang) {
@@ -130,6 +148,7 @@
   });
   updateLanguage('en');
 </script>
+
 <footer>
   <p>&copy; 2025 Ozan Tok | Powered by GitHub Pages</p>
 </footer>
