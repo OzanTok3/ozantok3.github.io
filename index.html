@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ozan Tok - Portföy</title>
+  <title>Ozan Tok - Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v5/font/simple-icons.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -17,10 +18,40 @@
       color: white;
       padding: 20px;
       text-align: center;
+      position: relative;
+    }
+    #languageToggle {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background: white;
+      color: #ff6b00;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .contact-inline {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .contact-inline a, .contact-inline span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: white;
+      font-size: 14px;
+    }
+    .contact-inline img {
+      width: 16px;
+      height: 16px;
     }
     section {
       padding: 30px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
     h1, h2, h3 {
@@ -64,6 +95,31 @@
       width: 120px;
       margin-top: 10px;
     }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .skill-item {
+      text-align: center;
+    }
+    .skill-item img {
+      width: 40px;
+      height: 40px;
+      display: block;
+      margin: auto;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+    .contact-item img {
+      width: 20px;
+      height: 20px;
+    }
     footer {
       text-align: center;
       padding: 20px;
@@ -76,43 +132,13 @@
 
 <header>
   <h1>Ozan Tok</h1>
-  <p>Android Developer | Yazılım Meraklısı</p>
-</header>
-
-<section>
-  <h2>Hakkımda</h2>
-  <p>Merhaba! Ben Ozan. Mobil uygulama geliştirme, özellikle Android üzerinde çalışıyorum. Kotlin, Jetpack ve modern mimari yapılarla ilgileniyorum.</p>
-
-  <h2>Zaman Çizelgesi</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <h3>🎓 Kadir Has Üniversitesi</h3>
-      <p>Bilgisayar Mühendisliği | Mezun</p>
-      <p><em>Lisans eğitimi süresince yazılım geliştirme temelleri, algoritmalar ve mobil programlama üzerine yoğunlaştım.</em></p>
-    </div>
-    <div class="timeline-item">
-      <h3>💼 ForInvest Digital Solutions</h3>
-      <p>Android Developer | Ekim 2019 - Halen</p>
-      <img src="forinvest-logo.png" alt="ForInvest Logo" class="company-logo">
-      <p><em>Kurumsal projelerde Android uygulama geliştirme, modern teknolojilerle entegrasyon ve bakım görevlerinde bulundum.</em></p>
-    </div>
+  <p data-en="Senior Android Developer | Actively looking for new opportunities"
+     data-tr="Kıdemli Android Geliştirici | Yeni fırsatlara açık">Senior Android Developer | Actively looking for new opportunities</p>
+  <div class="contact-inline">
+    <span><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon"> ozantok3@gmail.com</span>
+    <span><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone Icon"> +90 535 398 67 80</span>
+    <a href="https://www.linkedin.com/in/ozantok" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon"> linkedin.com/in/ozantok</a>
+    <a href="https://github.com/OzanTok3" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon"> github.com/OzanTok3</a>
   </div>
-
-  <h2>Projelerim</h2>
-  <ul>
-    <li><a href="https://github.com/OzanTok3/plant-app" target="_blank">🌿 Plant App – Bitki Tanıma Uygulaması</a></li>
-    <li><a href="https://github.com/OzanTok3/depremtakip" target="_blank">📍 Deprem Takip – Gerçek Zamanlı Uyarılar</a></li>
-    <li><a href="https://github.com/OzanTok3/quizgenius" target="_blank">🧠 Quiz Genius – Soru Cevap Uygulaması</a></li>
-  </ul>
-
-  <h2>İletişim</h2>
-  <p>E-posta: <a href="mailto:ozantok3@gmail.com">ozantok3@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/ozantok" target="_blank">linkedin.com/in/ozantok</a></p>
-</section>
-
-<footer>
-  &copy; 2025 Ozan Tok | GitHub Pages ile yayınlandı
-</footer>
-
-</body>
-</html>
+  <button id="languageToggle">TR</button>
+</header>
