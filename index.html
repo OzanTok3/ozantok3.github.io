@@ -58,8 +58,8 @@
       font-size: 14px;
     }
     .contact-inline img {
-      width: 16px;
-      height: 16px;
+  width: 16px;
+  height: 16px;
     }
     section {
       max-width: 900px;
@@ -101,56 +101,159 @@
       color: #777;
     }
   </style>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="manifest" href="manifest.json">
-  <meta name="description" content="Ozan Tok - Senior Android Developer Portfolio">
-  <meta name="keywords" content="Android, Kotlin, Jetpack Compose, Portfolio, Ozan Tok">
-  <meta name="author" content="Ozan Tok">
 </head>
 <body>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    document.body.style.opacity = 0;
-    setTimeout(() => {
-      document.body.style.transition = 'opacity 0.5s';
-      document.body.style.opacity = 1;
-    }, 100);
-  });
-</script>
-
-<!-- Sayfa içeriği dinamik olarak Canvas'ta üretildiğinden bu örneğe özet yerleştirildi -->
-<header>
-  <h1>Ozan Tok</h1>
-  <p>Senior Android Developer</p>
-</header>
-
-<section>
-  <details class="accordion" open>
-    <summary data-en="📌 About Me" data-tr="📌 Hakkımda">📌 About Me</summary>
-    <div class="accordion-content">
-      <p data-en="Hi, I'm Ozan Tok. I have been developing Android applications professionally for over 6 years..."
-         data-tr="Merhaba, ben Ozan Tok. Yaklaşık 6 yıldır profesyonel olarak Android uygulamaları geliştiriyorum...">
-        Hi, I'm Ozan Tok. I have been developing Android applications professionally for over 6 years...
-      </p>
+  <header>
+    <h1>Ozan Tok</h1>
+    <p>Senior Android Developer</p>
+    <select id="languageToggle" style="font-size: 14px; padding: 8px 14px; height: 38px;">
+  <option value="en">🇬🇧 EN</option>
+  <option value="tr">🇹🇷 TR</option>
+</select>
+    <div class="contact-inline">
+      <span><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon"> ozantok3@gmail.com</span>
+      <span><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone Icon"> +90 535 398 67 80</span>
+      <a href="https://www.linkedin.com/in/ozantok" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon"> linkedin.com/in/ozantok</a>
+      <a href="https://github.com/OzanTok3" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon"> github.com/OzanTok3</a>
     </div>
-  </details>
-</section>
+    <div style="margin-top: 15px;">
+      <a href="resume.pdf" style="background:#e6ecf2; color:#003366; padding:8px 16px; border-radius:5px; font-weight:bold; text-decoration:none;">
+        📄 Download CV
+      </a>
+    </div>
+  </header>
+
+  <section>
+    <details class="accordion" open>
+      <summary data-en="📌 About Me" data-tr="📌 Hakkımda">📌 About Me</summary>
+      <div class="accordion-content">
+        <p data-en="Hi, I'm Ozan Tok. I have been developing Android applications professionally for over 6 years. I specialize in building scalable, testable Android apps using modern tools such as Kotlin, Jetpack Compose, and MVVM architecture. My recent work includes fintech applications with real-time BIST tracking, in-app trading, and advanced portfolio management at ForInvest Digital Solutions. I enjoy working in clean codebases and contributing to meaningful, user-focused projects."
+           data-tr="Merhaba, ben Ozan Tok. Yaklaşık 6 yıldır profesyonel olarak Android uygulamaları geliştiriyorum. Kotlin, Jetpack Compose ve MVVM gibi modern araçlarla ölçeklenebilir ve test edilebilir uygulamalar geliştirme konusunda uzmanlaştım. Son olarak ForInvest Digital Solutions'ta BIST verileri, anlık yatırım takibi ve portföy yönetimi içeren fintech projelerinde çalıştım. Temiz kod yapısını, kullanıcı odaklı çözümleri ve sürdürülebilirliği öncelik olarak görüyorum.">
+          Hi, I'm Ozan Tok. I have been developing Android applications professionally for over 6 years. I specialize in building scalable, testable Android apps using modern tools such as Kotlin, Jetpack Compose, and MVVM architecture. My recent work includes fintech applications with real-time BIST tracking, in-app trading, and advanced portfolio management at ForInvest Digital Solutions. I enjoy working in clean codebases and contributing to meaningful, user-focused projects.
+        </p>
+      </div>
+    </details>
+    <details class="accordion" open>
+      <summary data-en="🧠 Skills" data-tr="🧠 Yetenekler">🧠 Skills</summary>
+      <div class="accordion-content">
+  <h3 data-en="Core Technologies" data-tr="Temel Teknolojiler">Core Technologies</h3>
+  <div class="skills-grid">
+  <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kotlin.svg" style="width: 24px; height: 24px;" /><p>Kotlin</p></div>
+  <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px;" /><p>Android SDK</p></div>
+  <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jetpackcompose.svg" style="width: 24px; height: 24px;" /><p>Jetpack Compose</p></div>
+  <div class="skill-item">
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px;" />
+  <p>MVVM</p></div>
+  <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px;" /><p>Hilt</p></div>
+  <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px;" /><p>Room</p></div>
+  <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px;" /><p>Retrofit</p></div>
+</div>
+<h3 data-en="Advanced Skills" data-tr="İleri Beceriler">Advanced Skills</h3>
+  <div class="skills-grid">
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px; margin-bottom: 6px;" />
+      <p>Coroutines & Flow</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px; margin-bottom: 6px;" />
+      <p>WorkManager</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px; margin-bottom: 6px;" />
+      <p>Paging 3</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px; margin-bottom: 6px;" />
+      <p>DataStore</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px; margin-bottom: 6px;" />
+      <p>Mockito / Mockk</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px; margin-bottom: 6px;" />
+      <p>Detekt / Ktlint</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px; margin-bottom: 6px;" />
+      <p>Remote Config</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px; margin-bottom: 6px;" />
+      <p>App Modularization</p>
+    </div>
+  </div>
+  <h3 data-en="Professional Skills" data-tr="Profesyonel Beceriler">Professional Skills</h3>
+  <div class="skills-grid">
+  <div class="skill-item">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px; margin-bottom: 6px;" />
+    <p>Clean Architecture</p>
+  </div>
+  <div class="skill-item">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px; margin-bottom: 6px;" />
+    <p>Navigation Component</p>
+  </div>
+  <div class="skill-item">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px; margin-bottom: 6px;" />
+    <p>Unit Testing, Espresso</p>
+  </div>
+  <div class="skill-item">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px; margin-bottom: 6px;" />
+    <p>CI/CD with GitHub Actions</p>
+  </div>
+  <div class="skill-item">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px; margin-bottom: 6px;" />
+    <p>Crashlytics / Analytics</p>
+  </div>
+  <div class="skill-item">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg" style="width: 24px; height: 24px; margin-bottom: 6px;" />
+    <p>In-App Billing / AdMob</p>
+  </div>
+</div>
+      </div>
+    </details>
+
+    <details class="accordion" open>
+      <summary data-en="🧭 Career Journey" data-tr="🧭 Kariyer Yolculuğu">🧭 Career Journey</summary>
+      <div class="accordion-content">
+        <h3 data-en="🎓 Kadir Has University" data-tr="🎓 Kadir Has Üniversitesi">🎓 Kadir Has University</h3>
+        <p data-en="Bachelor's Degree in Computer Engineering" data-tr="Bilgisayar Mühendisliği Lisans Derecesi">Bachelor's Degree in Computer Engineering</p>
+        <h3 data-en="💼 ForInvest Digital Solutions" data-tr="💼 ForInvest Digital Solutions">💼 ForInvest Digital Solutions</h3>
+        <p data-en="Android Developer | October 2019 - Present" data-tr="Android Geliştirici | Ekim 2019 - Günümüz">Android Developer | October 2019 - Present</p>
+        <p data-en="Developed Borsa Istanbul (BIST) and banking applications for investment tracking, real-time trading, analytics and user portfolio management." data-tr="Yatırım takibi, gerçek zamanlı işlem, analiz ve kullanıcı portföy yönetimi için Borsa İstanbul (BIST) ve bankacılık uygulamaları geliştirdim.">Developed Borsa Istanbul (BIST) and banking applications for investment tracking, real-time trading, analytics and user portfolio management.</p>
+      </div>
+    </details>
+
+    <details class="accordion" open>
+      <summary data-en="📁 Projects" data-tr="📁 Projeler">📁 Projects</summary>
+      <div class="accordion-content">
+        <ul>
+          <li><a href="https://github.com/OzanTok3/plant-app" target="_blank">🌿 Plant App</a></li>
+          <li><a href="https://github.com/OzanTok3/depremtakip" target="_blank">📍 Earthquake Tracker</a></li>
+        </ul>
+      </div>
+    </details>
+  </section>
 
 <script>
   const toggle = document.getElementById('languageToggle');
+
   function updateLanguage(lang) {
     document.querySelectorAll('[data-en]').forEach(el => {
       el.textContent = el.getAttribute(`data-${lang}`);
     });
   }
+
   toggle.addEventListener('change', function () {
     updateLanguage(this.value);
   });
+
+  // Sayfa ilk açıldığında İngilizce ile başlasın
   updateLanguage('en');
 </script>
 
-<footer>
-  <p>&copy; 2025 Ozan Tok | Powered by GitHub Pages</p>
-</footer>
+  <footer>
+    <p>&copy; 2025 Ozan Tok | Powered by GitHub Pages</p>
+  </footer>
 </body>
 </html>
