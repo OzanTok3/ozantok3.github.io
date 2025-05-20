@@ -11,130 +11,166 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
       color: #333;
     }
     header {
-  background: linear-gradient(135deg, #003366, #005f99);
-  color: white;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-}
-    <select id="languageToggle" style="position:absolute; right:20px; top:20px; background:white; color:#003366; border:none; padding:5px 10px; border-radius:6px; font-weight:bold; cursor:pointer;">
-  <option value="en">🇬🇧</option>
-  <option value="tr">🇹🇷</option>
-</select>
-  <div style="margin-top: 15px;">
-    <a href="resume.pdf" target="_blank" style="background:white;color:#ff6b00;padding:8px 16px;border-radius:5px;font-weight:bold;text-decoration:none;">
-      📄 Download CV
-    </a>
-  </div>
-</header>
-
-<section>
-  <details open style="margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 10px;">
-    <summary style="cursor:pointer; font-weight: bold;"><h2 data-en="📌 About Me" data-tr="📌 Hakkımda">📌 About Me</h2></summary>
-  <h2 data-en="📌 About Me" data-tr="📌 Hakkımda">📌 About Me</h2>
-  <p data-en="Hi, I'm Ozan Tok. I have been developing Android applications professionally for over 6 years. I specialize in building scalable, testable Android apps using modern tools such as Kotlin, Jetpack Compose, and MVVM architecture. My recent work includes fintech applications with real-time BIST tracking, in-app trading, and advanced portfolio management at ForInvest Digital Solutions. I enjoy working in clean codebases and contributing to meaningful, user-focused projects."
-   data-tr="Merhaba, ben Ozan Tok. Yaklaşık 6 yıldır profesyonel olarak Android uygulamaları geliştiriyorum. Kotlin, Jetpack Compose ve MVVM gibi modern araçlarla ölçeklenebilir ve test edilebilir uygulamalar geliştirme konusunda uzmanlaştım. Son olarak ForInvest Digital Solutions'ta BIST verileri, anlık yatırım takibi ve portföy yönetimi içeren fintech projelerinde çalıştım. Temiz kod yapısını, kullanıcı odaklı çözümleri ve sürdürülebilirliği öncelik olarak görüyorum.">
-  Hi, I'm Ozan Tok. I have been developing Android applications professionally for over 6 years. I specialize in building scalable, testable Android apps using modern tools such as Kotlin, Jetpack Compose, and MVVM architecture. My recent work includes fintech applications with real-time BIST tracking, in-app trading, and advanced portfolio management at ForInvest Digital Solutions. I enjoy working in clean codebases and contributing to meaningful, user-focused projects.
-</p>
-
-  </details>
-  <details open style="margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 10px;">
-    <summary style="cursor:pointer; font-weight: bold;"><h2 data-en="🧠 Skills" data-tr="🧠 Yetenekler">🧠 Skills</h2></summary>
-  <h3 data-en="Core Technologies" data-tr="Temel Teknolojiler">Core Technologies</h3>
-  <div class="skills-grid" id="coreSkills"></div>
-
-  <h3 data-en="Professional Skills" data-tr="Profesyonel Beceriler">Professional Skills</h3>
-  <div class="skills-grid" id="proSkills"></div>
-
-  </details>
-  <details open style="margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 10px;">
-    <summary style="cursor:pointer; font-weight: bold;"><h2 data-en="🕒 Timeline" data-tr="🕒 Zaman Çizelgesi">🕒 Timeline</h2></summary>
-  <div class="timeline">
-    <div class="timeline-item">
-      <h3 data-en="🎓 Kadir Has University" data-tr="🎓 Kadir Has Üniversitesi">🎓 Kadir Has University</h3>
-      <p data-en="Bachelor's Degree in Computer Engineering"
-         data-tr="Bilgisayar Mühendisliği Lisans Derecesi">Bachelor's Degree in Computer Engineering</p>
+      background: linear-gradient(135deg, #003366, #005f99);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    #languageToggle {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background: white;
+      color: #003366;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .contact-inline {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .contact-inline a, .contact-inline span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: white;
+      font-size: 14px;
+    }
+    .contact-inline img {
+      width: 16px;
+      height: 16px;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+    }
+    .accordion {
+      border-radius: 6px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      background: white;
+    }
+    .accordion summary {
+      background-color: #f1f5f9;
+      padding: 16px 24px;
+      cursor: pointer;
+      font-weight: bold;
+      list-style: none;
+    }
+    .accordion summary::-webkit-details-marker {
+      display: none;
+    }
+    .accordion[open] summary {
+      background-color: #e0e7ff;
+    }
+    .accordion-content {
+      padding: 16px 24px;
+      animation: fadein 0.3s ease-in-out;
+    }
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ozan Tok</h1>
+    <p>Senior Android Developer</p>
+    <select id="languageToggle">
+      <option value="en">🇬🇧</option>
+      <option value="tr">🇹🇷</option>
+    </select>
+    <div class="contact-inline">
+      <span><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon"> ozantok3@gmail.com</span>
+      <span><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone Icon"> +90 535 398 67 80</span>
+      <a href="https://www.linkedin.com/in/ozantok" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon"> linkedin.com/in/ozantok</a>
+      <a href="https://github.com/OzanTok3" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon"> github.com/OzanTok3</a>
     </div>
-    <div class="timeline-item">
-      <h3 data-en="💼 ForInvest Digital Solutions" data-tr="💼 ForInvest Digital Solutions">💼 ForInvest Digital Solutions</h3>
-      <p data-en="Android Developer | October 2019 - Present"
-         data-tr="Android Geliştirici | Ekim 2019 - Günümüz">Android Developer | October 2019 - Present</p>
-      <img src="forinvest-logo.png" alt="ForInvest Logo" class="company-logo" />
-      <p data-en="Developed mobile investment platforms..."
-         data-tr="Mobil yatırım uygulamaları geliştirdim...">Developed mobile investment platforms...</p>
+    <div style="margin-top: 15px;">
+      <a href="resume.pdf" target="_blank" style="background:white;color:#ff6b00;padding:8px 16px;border-radius:5px;font-weight:bold;text-decoration:none;">
+        📄 Download CV
+      </a>
     </div>
-  </div>
+  </header>
 
-  </details>
-  <details open style="margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 10px;">
-    <summary style="cursor:pointer; font-weight: bold;"><h2 data-en="📁 Projects" data-tr="📁 Projeler">📁 Projects</h2></summary>
-  <ul>
-    <li><a href="https://github.com/OzanTok3/plant-app" target="_blank">🌿 Plant App</a></li>
-    <li><a href="https://github.com/OzanTok3/depremtakip" target="_blank">📍 Earthquake Tracker</a></li>
-    
-  </ul>
-</section>
+  <section>
+    <details class="accordion" open>
+      <summary data-en="📌 About Me" data-tr="📌 Hakkımda">📌 About Me</summary>
+      <div class="accordion-content">
+        <p data-en="Hi, I'm Ozan Tok. I have been developing Android applications professionally for over 6 years. I specialize in building scalable, testable Android apps using modern tools such as Kotlin, Jetpack Compose, and MVVM architecture. My recent work includes fintech applications with real-time BIST tracking, in-app trading, and advanced portfolio management at ForInvest Digital Solutions. I enjoy working in clean codebases and contributing to meaningful, user-focused projects."
+           data-tr="Merhaba, ben Ozan Tok. Yaklaşık 6 yıldır profesyonel olarak Android uygulamaları geliştiriyorum. Kotlin, Jetpack Compose ve MVVM gibi modern araçlarla ölçeklenebilir ve test edilebilir uygulamalar geliştirme konusunda uzmanlaştım. Son olarak ForInvest Digital Solutions'ta BIST verileri, anlık yatırım takibi ve portföy yönetimi içeren fintech projelerinde çalıştım. Temiz kod yapısını, kullanıcı odaklı çözümleri ve sürdürülebilirliği öncelik olarak görüyorum.">
+          Hi, I'm Ozan Tok. I have been developing Android applications professionally for over 6 years...
+        </p>
+      </div>
+    </details>
+    <details class="accordion">
+      <summary data-en="🧠 Skills" data-tr="🧠 Yetenekler">🧠 Skills</summary>
+      <div class="accordion-content">
+        <h3 data-en="Core Technologies" data-tr="Temel Teknolojiler">Core Technologies</h3>
+        <ul>
+          <li>Kotlin</li>
+          <li>Android SDK</li>
+          <li>Jetpack Compose</li>
+          <li>MVVM</li>
+          <li>Hilt</li>
+          <li>Room</li>
+          <li>Retrofit</li>
+        </ul>
+        <h3 data-en="Professional Skills" data-tr="Profesyonel Beceriler">Professional Skills</h3>
+        <ul>
+          <li>Clean Architecture</li>
+          <li>Navigation Component</li>
+          <li>Unit Testing, Espresso</li>
+          <li>CI/CD with GitHub Actions</li>
+          <li>Crashlytics / Analytics</li>
+          <li>In-App Billing / AdMob</li>
+        </ul>
+      </div>
+    </details>
 
-<footer>
-  <div class="contact-inline">
-    <span><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon"> ozantok3@gmail.com</span>
-    <span><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone Icon"> +90 535 398 67 80</span>
-    <a href="https://www.linkedin.com/in/ozantok" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon"> linkedin.com/in/ozantok</a>
-    <a href="https://github.com/OzanTok3" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon"> github.com/OzanTok3</a>
-  </div>
-  <p style="margin-top: 15px;">&copy; 2025 Ozan Tok | Powered by GitHub Pages</p>
-</footer>
+    <details class="accordion">
+      <summary data-en="🕒 Timeline" data-tr="🕒 Zaman Çizelgesi">🕒 Timeline</summary>
+      <div class="accordion-content">
+        <h3 data-en="🎓 Kadir Has University" data-tr="🎓 Kadir Has Üniversitesi">🎓 Kadir Has University</h3>
+        <p data-en="Bachelor's Degree in Computer Engineering" data-tr="Bilgisayar Mühendisliği Lisans Derecesi">Bachelor's Degree in Computer Engineering</p>
+        <h3 data-en="💼 ForInvest Digital Solutions" data-tr="💼 ForInvest Digital Solutions">💼 ForInvest Digital Solutions</h3>
+        <p data-en="Android Developer | October 2019 - Present" data-tr="Android Geliştirici | Ekim 2019 - Günümüz">Android Developer | October 2019 - Present</p>
+        <p data-en="Worked on investment tracking, BIST data, trading and analytics features." data-tr="Yatırım takibi, BIST verileri, işlem ve analiz özellikleri üzerinde çalıştım.">Worked on investment tracking, BIST data, trading and analytics features.</p>
+      </div>
+    </details>
 
-<script>
-const toggle = document.getElementById('languageToggle');
-let currentLang = 'en';
+    <details class="accordion">
+      <summary data-en="📁 Projects" data-tr="📁 Projeler">📁 Projects</summary>
+      <div class="accordion-content">
+        <ul>
+          <li><a href="https://github.com/OzanTok3/plant-app" target="_blank">🌿 Plant App</a></li>
+          <li><a href="https://github.com/OzanTok3/depremtakip" target="_blank">📍 Earthquake Tracker</a></li>
+        </ul>
+      </div>
+    </details>
+  </section>
 
-function updateLanguage(lang) {
-  document.querySelectorAll('[data-en]').forEach(el => {
-    el.innerText = el.getAttribute(`data-${lang}`);
-  });
-  toggle.innerText = lang === 'en' ? 'TR' : 'EN';
-  currentLang = lang;
-}
-
-const coreSkills = document.getElementById('coreSkills');
-const proSkills = document.getElementById('proSkills');
-
-const icons = {
-  kotlin: 'kotlin', android: 'android', jetpack: 'jetpackcompose', firebase: 'firebase',
-  retrofit: 'android', room: 'android', hilt: 'android', github: 'github', git: 'git'
-};
-
-const coreItems = Object.entries(icons).map(([name, icon]) => `
-  <div class="skill-item">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/${icon}.svg" alt="${name}" />
-    <p>${name.charAt(0).toUpperCase() + name.slice(1)}</p>
-  </div>
-`).join('');
-coreSkills.innerHTML = coreItems;
-
-const proLabels = [
-  'Clean Architecture', 'MVVM Pattern', 'Navigation Component', 'JUnit & Espresso',
-  'ViewBinding / DataBinding', 'CI/CD (GitHub Actions)', 'Crashlytics / Performance', 'In-App Billing / AdMob'
-];
-
-const proItems = proLabels.map(name => `
-  <div class="skill-item">
-    <img src="https://cdn-icons-png.flaticon.com/512/226/226770.png" alt="Android Icon" />
-    <p>${name}</p>
-  </div>
-`).join('');
-proSkills.innerHTML = proItems;
-
-// default language: English
-toggle.addEventListener('click', () => {
-  const newLang = currentLang === 'en' ? 'tr' : 'en';
-  updateLanguage(newLang);
-});
-
-updateLanguage('en');
-</script>
+  <footer>
+    <p>&copy; 2025 Ozan Tok | Powered by GitHub Pages</p>
+  </footer>
+</body>
+</html>
