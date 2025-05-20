@@ -21,16 +21,17 @@
       position: relative;
     }
     #languageToggle {
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      background: white;
-      color: #ff6b00;
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: white;
+  color: #ff6b00;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+}
     .contact-inline {
       display: flex;
       justify-content: center;
@@ -132,8 +133,7 @@
 
 <header>
   <h1>Ozan Tok</h1>
-  <p data-en="Senior Android Developer | Actively looking for new opportunities"
-     data-tr="Kıdemli Android Geliştirici | Yeni fırsatlara açık">Senior Android Developer | Actively looking for new opportunities</p>
+  <p data-en="Senior Android Developer" data-tr="Kıdemli Android Geliştirici">Senior Android Developer</p>
   <div class="contact-inline">
     <span><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon"> ozantok3@gmail.com</span>
     <span><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone Icon"> +90 535 398 67 80</span>
@@ -188,7 +188,13 @@
 </section>
 
 <footer>
-  &copy; 2025 Ozan Tok | Powered by GitHub Pages
+  <div class="contact-inline">
+    <span><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon"> ozantok3@gmail.com</span>
+    <span><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone Icon"> +90 535 398 67 80</span>
+    <a href="https://www.linkedin.com/in/ozantok" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon"> linkedin.com/in/ozantok</a>
+    <a href="https://github.com/OzanTok3" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon"> github.com/OzanTok3</a>
+  </div>
+  <p style="margin-top: 15px;">&copy; 2025 Ozan Tok | Powered by GitHub Pages</p>
 </footer>
 
 <script>
@@ -208,7 +214,7 @@ const proSkills = document.getElementById('proSkills');
 
 const icons = {
   kotlin: 'kotlin', android: 'android', jetpack: 'jetpackcompose', firebase: 'firebase',
-  retrofit: 'retrofit', room: 'room', hilt: 'hilt', github: 'github', git: 'git'
+  retrofit: 'android', room: 'android', hilt: 'android', github: 'github', git: 'git'
 };
 
 const coreItems = Object.entries(icons).map(([name, icon]) => `
