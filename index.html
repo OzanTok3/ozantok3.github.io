@@ -15,135 +15,15 @@
       color: #333;
     }
     header {
-      background: #ff6b00;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      position: relative;
-    }
-    #languageToggle {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  background: white;
-  color: #ff6b00;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 6px;
+  background: linear-gradient(135deg, #003366, #005f99);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
 }
-    .contact-inline {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 10px;
-    }
-    .contact-inline a, .contact-inline span {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      color: white;
-      font-size: 14px;
-    }
-    .contact-inline img {
-      width: 16px;
-      height: 16px;
-    }
-    section {
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1, h2, h3 {
-      color: #444;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin: 10px 0;
-    }
-    a {
-      text-decoration: none;
-      color: #ff6b00;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .timeline {
-      position: relative;
-      margin: 30px 0;
-      padding-left: 30px;
-      border-left: 2px solid #ff6b00;
-    }
-    .timeline-item {
-      margin-bottom: 20px;
-      position: relative;
-    }
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -10px;
-      top: 5px;
-      width: 14px;
-      height: 14px;
-      background-color: #ff6b00;
-      border-radius: 50%;
-    }
-    .company-logo {
-      width: 120px;
-      margin-top: 10px;
-    }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 15px;
-      margin-top: 15px;
-    }
-    .skill-item {
-      text-align: center;
-    }
-    .skill-item img {
-      width: 40px;
-      height: 40px;
-      display: block;
-      margin: auto;
-    }
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 10px 0;
-    }
-    .contact-item img {
-      width: 20px;
-      height: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>Ozan Tok</h1>
-  <p data-en="Senior Android Developer" data-tr="Kıdemli Android Geliştirici">Senior Android Developer</p>
-  <div class="contact-inline">
-    <span><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon"> ozantok3@gmail.com</span>
-    <span><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone Icon"> +90 535 398 67 80</span>
-    <a href="https://www.linkedin.com/in/ozantok" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon"> linkedin.com/in/ozantok</a>
-    <a href="https://github.com/OzanTok3" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon"> github.com/OzanTok3</a>
-  </div>
-  <select id="languageToggle" style="position:absolute; right:20px; top:20px; background:white; color:#003366; border:none; padding:5px 10px; border-radius:6px; font-weight:bold; cursor:pointer;">
-  <option value="en">🇬🇧 English</option>
-  <option value="tr">🇹🇷 Türkçe</option>
+    <select id="languageToggle" style="position:absolute; right:20px; top:20px; background:white; color:#003366; border:none; padding:5px 10px; border-radius:6px; font-weight:bold; cursor:pointer;">
+  <option value="en">🇬🇧</option>
+  <option value="tr">🇹🇷</option>
 </select>
   <div style="margin-top: 15px;">
     <a href="resume.pdf" target="_blank" style="background:white;color:#ff6b00;padding:8px 16px;border-radius:5px;font-weight:bold;text-decoration:none;">
@@ -153,8 +33,8 @@
 </header>
 
 <section>
-  <details open>
-    <summary><h2 data-en="📌 About Me" data-tr="📌 Hakkımda">📌 About Me</h2></summary>
+  <details open style="margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 10px;">
+    <summary style="cursor:pointer; font-weight: bold;"><h2 data-en="📌 About Me" data-tr="📌 Hakkımda">📌 About Me</h2></summary>
   <h2 data-en="📌 About Me" data-tr="📌 Hakkımda">📌 About Me</h2>
   <p data-en="Hi, I'm Ozan Tok. I have been developing Android applications professionally for over 6 years. I specialize in building scalable, testable Android apps using modern tools such as Kotlin, Jetpack Compose, and MVVM architecture. My recent work includes fintech applications with real-time BIST tracking, in-app trading, and advanced portfolio management at ForInvest Digital Solutions. I enjoy working in clean codebases and contributing to meaningful, user-focused projects."
    data-tr="Merhaba, ben Ozan Tok. Yaklaşık 6 yıldır profesyonel olarak Android uygulamaları geliştiriyorum. Kotlin, Jetpack Compose ve MVVM gibi modern araçlarla ölçeklenebilir ve test edilebilir uygulamalar geliştirme konusunda uzmanlaştım. Son olarak ForInvest Digital Solutions'ta BIST verileri, anlık yatırım takibi ve portföy yönetimi içeren fintech projelerinde çalıştım. Temiz kod yapısını, kullanıcı odaklı çözümleri ve sürdürülebilirliği öncelik olarak görüyorum.">
@@ -162,8 +42,8 @@
 </p>
 
   </details>
-  <details open>
-    <summary><h2 data-en="🧠 Skills" data-tr="🧠 Yetenekler">🧠 Skills</h2></summary>
+  <details open style="margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 10px;">
+    <summary style="cursor:pointer; font-weight: bold;"><h2 data-en="🧠 Skills" data-tr="🧠 Yetenekler">🧠 Skills</h2></summary>
   <h3 data-en="Core Technologies" data-tr="Temel Teknolojiler">Core Technologies</h3>
   <div class="skills-grid" id="coreSkills"></div>
 
@@ -171,8 +51,8 @@
   <div class="skills-grid" id="proSkills"></div>
 
   </details>
-  <details open>
-    <summary><h2 data-en="🕒 Timeline" data-tr="🕒 Zaman Çizelgesi">🕒 Timeline</h2></summary>
+  <details open style="margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 10px;">
+    <summary style="cursor:pointer; font-weight: bold;"><h2 data-en="🕒 Timeline" data-tr="🕒 Zaman Çizelgesi">🕒 Timeline</h2></summary>
   <div class="timeline">
     <div class="timeline-item">
       <h3 data-en="🎓 Kadir Has University" data-tr="🎓 Kadir Has Üniversitesi">🎓 Kadir Has University</h3>
@@ -190,8 +70,8 @@
   </div>
 
   </details>
-  <details open>
-    <summary><h2 data-en="📁 Projects" data-tr="📁 Projeler">📁 Projects</h2></summary>
+  <details open style="margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 10px;">
+    <summary style="cursor:pointer; font-weight: bold;"><h2 data-en="📁 Projects" data-tr="📁 Projeler">📁 Projects</h2></summary>
   <ul>
     <li><a href="https://github.com/OzanTok3/plant-app" target="_blank">🌿 Plant App</a></li>
     <li><a href="https://github.com/OzanTok3/depremtakip" target="_blank">📍 Earthquake Tracker</a></li>
