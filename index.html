@@ -141,4 +141,102 @@
     <a href="https://github.com/OzanTok3" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon"> github.com/OzanTok3</a>
   </div>
   <button id="languageToggle">TR</button>
+  <div style="margin-top: 15px;">
+    <a href="resume.pdf" target="_blank" style="background:white;color:#ff6b00;padding:8px 16px;border-radius:5px;font-weight:bold;text-decoration:none;">
+      📄 Download CV
+    </a>
+  </div>
 </header>
+
+<section>
+  <h2 data-en="About Me" data-tr="Hakkımda">About Me</h2>
+  <p data-en="Hi, I'm Ozan Tok. I have been developing Android applications professionally for over 6 years..."
+     data-tr="Merhaba, ben Ozan Tok. Yaklaşık 6 yıldır profesyonel olarak Android uygulamalar geliştiriyorum...">
+    Hi, I'm Ozan Tok. I have been developing Android applications professionally for over 6 years...
+  </p>
+
+  <h2 data-en="Skills" data-tr="Yetenekler">Skills</h2>
+  <h3 data-en="Core Technologies" data-tr="Temel Teknolojiler">Core Technologies</h3>
+  <div class="skills-grid" id="coreSkills"></div>
+
+  <h3 data-en="Professional Skills" data-tr="Profesyonel Beceriler">Professional Skills</h3>
+  <div class="skills-grid" id="proSkills"></div>
+
+  <h2 data-en="Timeline" data-tr="Zaman Çizelgesi">Timeline</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3 data-en="🎓 Kadir Has University" data-tr="🎓 Kadir Has Üniversitesi">🎓 Kadir Has University</h3>
+      <p data-en="Bachelor's Degree in Computer Engineering"
+         data-tr="Bilgisayar Mühendisliği Lisans Derecesi">Bachelor's Degree in Computer Engineering</p>
+    </div>
+    <div class="timeline-item">
+      <h3 data-en="💼 ForInvest Digital Solutions" data-tr="💼 ForInvest Digital Solutions">💼 ForInvest Digital Solutions</h3>
+      <p data-en="Android Developer | October 2019 - Present"
+         data-tr="Android Geliştirici | Ekim 2019 - Günümüz">Android Developer | October 2019 - Present</p>
+      <img src="forinvest-logo.png" alt="ForInvest Logo" class="company-logo" />
+      <p data-en="Developed mobile investment platforms..."
+         data-tr="Mobil yatırım uygulamaları geliştirdim...">Developed mobile investment platforms...</p>
+    </div>
+  </div>
+
+  <h2 data-en="Projects" data-tr="Projeler">Projects</h2>
+  <ul>
+    <li><a href="https://github.com/OzanTok3/plant-app" target="_blank">🌿 Plant App</a></li>
+    <li><a href="https://github.com/OzanTok3/depremtakip" target="_blank">📍 Earthquake Tracker</a></li>
+    <li><a href="https://github.com/OzanTok3/quizgenius" target="_blank">🧠 Quiz Genius</a></li>
+  </ul>
+</section>
+
+<footer>
+  &copy; 2025 Ozan Tok | Powered by GitHub Pages
+</footer>
+
+<script>
+const toggle = document.getElementById('languageToggle');
+let currentLang = 'en';
+
+function updateLanguage(lang) {
+  document.querySelectorAll('[data-en]').forEach(el => {
+    el.innerText = el.getAttribute(`data-${lang}`);
+  });
+  toggle.innerText = lang === 'en' ? 'TR' : 'EN';
+  currentLang = lang;
+}
+
+const coreSkills = document.getElementById('coreSkills');
+const proSkills = document.getElementById('proSkills');
+
+const icons = {
+  kotlin: 'kotlin', android: 'android', jetpack: 'jetpackcompose', firebase: 'firebase',
+  retrofit: 'retrofit', room: 'room', hilt: 'hilt', github: 'github', git: 'git'
+};
+
+const coreItems = Object.entries(icons).map(([name, icon]) => `
+  <div class="skill-item">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/${icon}.svg" alt="${name}" />
+    <p>${name.charAt(0).toUpperCase() + name.slice(1)}</p>
+  </div>
+`).join('');
+coreSkills.innerHTML = coreItems;
+
+const proLabels = [
+  'Clean Architecture', 'MVVM Pattern', 'Navigation Component', 'JUnit & Espresso',
+  'ViewBinding / DataBinding', 'CI/CD (GitHub Actions)', 'Crashlytics / Performance', 'In-App Billing / AdMob'
+];
+
+const proItems = proLabels.map(name => `
+  <div class="skill-item">
+    <img src="https://cdn-icons-png.flaticon.com/512/226/226770.png" alt="Android Icon" />
+    <p>${name}</p>
+  </div>
+`).join('');
+proSkills.innerHTML = proItems;
+
+// default language: English
+toggle.addEventListener('click', () => {
+  const newLang = currentLang === 'en' ? 'tr' : 'en';
+  updateLanguage(newLang);
+});
+
+updateLanguage('en');
+</script>
