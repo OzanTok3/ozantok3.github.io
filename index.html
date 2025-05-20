@@ -235,6 +235,23 @@
     </details>
   </section>
 
+<script>
+  const toggle = document.getElementById('languageToggle');
+
+  function updateLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  toggle.addEventListener('change', function () {
+    updateLanguage(this.value);
+  });
+
+  // Sayfa ilk açıldığında İngilizce ile başlasın
+  updateLanguage('en');
+</script>
+
   <footer>
     <p>&copy; 2025 Ozan Tok | Powered by GitHub Pages</p>
   </footer>
