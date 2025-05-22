@@ -20,21 +20,33 @@
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Ozan Tok - Portfolio&lt;/title&gt;</p>
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v5/font/simple-icons.min.css"&gt;</p>
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg-light: #e6ecf2;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg-dark: #1f1f1f;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--text-light: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--text-dark: #333333;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent: #005f99;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
 <p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #e6ecf2;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--bg-light);</p>
 <p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: all 0.3s ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body.dark-mode {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--bg-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text-light);</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
 <p class="p1"><span class="Apple-converted-space">    </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, #003366, #005f99);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, #003366, var(--accent));</p>
 <p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>#languageToggle {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#languageToggle, #modeToggle {</p>
 <p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>right: 20px;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>top: 20px;</p>
@@ -45,6 +57,9 @@
 <p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#modeToggle {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>right: 120px;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
 <p class="p1"><span class="Apple-converted-space">    </span>.contact-inline {</p>
 <p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
@@ -121,6 +136,7 @@
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Ozan Tok&lt;/h1&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Senior Android Developer&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button id="modeToggle"&gt;🌙 Mode&lt;/button&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;select id="languageToggle"&gt;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>&lt;option value="en"&gt;🌍 EN&lt;/option&gt;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>&lt;option value="tr"&gt;🇹🇷 TR&lt;/option&gt;</p>
@@ -137,7 +153,6 @@
 <p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;section&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;details class="accordion" open&gt;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>&lt;summary&gt;📜 About Me&lt;/summary&gt;</p>
@@ -147,7 +162,6 @@
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/details&gt;</p>
-<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;details class="accordion" open&gt;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>&lt;summary&gt;🛠️ Skills&lt;/summary&gt;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="accordion-content"&gt;</p>
@@ -172,9 +186,17 @@
 <p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="skill-item"&gt;&lt;img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"&gt;&lt;p&gt;Remote Config&lt;/p&gt;&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="skill-item"&gt;&lt;img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"&gt;&lt;p&gt;App Modularization&lt;/p&gt;&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Professional Skills&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="skills-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="skill-item"&gt;&lt;img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"&gt;&lt;p&gt;Clean Architecture&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="skill-item"&gt;&lt;img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"&gt;&lt;p&gt;Navigation Component&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="skill-item"&gt;&lt;img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"&gt;&lt;p&gt;Unit Testing, Espresso&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="skill-item"&gt;&lt;img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"&gt;&lt;p&gt;CI/CD with GitHub Actions&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="skill-item"&gt;&lt;img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"&gt;&lt;p&gt;Crashlytics / Analytics&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="skill-item"&gt;&lt;img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"&gt;&lt;p&gt;In-App Billing / AdMob&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/details&gt;</p>
-<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;details class="accordion" open&gt;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>&lt;summary&gt;📈 Career Journey&lt;/summary&gt;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="accordion-content"&gt;</p>
@@ -185,7 +207,6 @@
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Developed BIST and banking apps for real-time trading and investment management.&lt;/p&gt;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/details&gt;</p>
-<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;details class="accordion" open&gt;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>&lt;summary&gt;📂 Projects&lt;/summary&gt;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="accordion-content"&gt;</p>
@@ -197,10 +218,24 @@
 <p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/details&gt;</p>
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;&amp;copy; 2025 Ozan Tok | Powered by GitHub Pages&lt;/p&gt;</p>
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const toggleLang = document.getElementById('languageToggle');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const toggleMode = document.getElementById('modeToggle');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>toggleLang.addEventListener('change', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const lang = toggleLang.value;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.querySelectorAll('[data-en]').forEach(el =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>el.textContent = el.getAttribute('data-' + lang);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>toggleMode.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.body.classList.toggle('dark-mode');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
 <p class="p1">&lt;/body&gt;</p>
 <p class="p1">&lt;/html&gt;</p>
 </body>
