@@ -144,21 +144,103 @@
   </style>
 </head>
 <body>
-<!-- İçerik aynı kalıyor -->
-<script>
-  const toggleLang = document.getElementById('languageToggle');
-  const toggleMode = document.getElementById('modeToggle');
+  <header>
+    <h1>Ozan Tok</h1>
+    <p>Senior Android Developer</p>
+    <button id="modeToggle">🌙 Mode</button>
+    <select id="languageToggle">
+      <option value="en">🌍 EN</option>
+      <option value="tr">🇹🇷 TR</option>
+    </select>
+    <div class="contact-inline">
+      <span><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon"> ozantok3@gmail.com</span>
+      <span><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone Icon"> +90 535 398 67 80</span>
+      <a href="https://www.linkedin.com/in/ozantok" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon"> linkedin.com/in/ozantok</a>
+      <a href="https://github.com/OzanTok3" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon"> github.com/OzanTok3</a>
+    </div>
+    <div style="margin-top: 15px;">
+      <a href="resume.pdf" style="background:#e6ecf2; color:#003366; padding:8px 16px; border-radius:5px; font-weight:bold; text-decoration:none;">
+        📄 Download CV
+      </a>
+    </div>
+  </header>
 
-  toggleLang.addEventListener('change', () => {
-    const lang = toggleLang.value;
-    document.querySelectorAll('[data-en]').forEach(el => {
-      el.textContent = el.getAttribute('data-' + lang);
+  <section>
+    <details class="accordion" open>
+      <summary>📜 About Me</summary>
+      <div class="accordion-content">
+        <p>
+          Hi, I'm Ozan Tok. I have been developing Android applications professionally for over 6 years. I specialize in building scalable, testable Android apps using modern tools such as Kotlin, Jetpack Compose, and MVVM architecture. My recent work includes fintech applications with real-time BIST tracking, in-app trading, and advanced portfolio management at ForInvest Digital Solutions. I enjoy working in clean codebases and contributing to meaningful, user-focused projects.
+        </p>
+      </div>
+    </details>
+
+    <details class="accordion" open>
+      <summary>🛠️ Skills</summary>
+      <div class="accordion-content">
+        <h3>Core Technologies</h3>
+        <div class="skills-grid">
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kotlin.svg"><p>Kotlin</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"><p>Android SDK</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jetpackcompose.svg"><p>Jetpack Compose</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"><p>MVVM</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"><p>Hilt</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"><p>Room</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"><p>Retrofit</p></div>
+        </div>
+        <h3>Advanced Skills</h3>
+        <div class="skills-grid">
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"><p>Coroutines & Flow</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"><p>WorkManager</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"><p>Paging 3</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"><p>DataStore</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"><p>Mockito / Mockk</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"><p>Detekt / Ktlint</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"><p>Remote Config</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/android.svg"><p>App Modularization</p></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="accordion" open>
+      <summary>📈 Career Journey</summary>
+      <div class="accordion-content">
+        <h3>🏫 Kadir Has University</h3>
+        <p>Bachelor's Degree in Computer Engineering</p>
+        <h3>💼 ForInvest Digital Solutions</h3>
+        <p>Android Developer | October 2019 - Present</p>
+        <p>Developed BIST and banking apps for real-time trading and investment management.</p>
+      </div>
+    </details>
+
+    <details class="accordion" open>
+      <summary>📂 Projects</summary>
+      <div class="accordion-content project-list">
+        <a href="https://github.com/OzanTok3/plant-app" target="_blank">🌱 Plant App</a>
+        <a href="https://github.com/OzanTok3/depremtakip" target="_blank">📍 Earthquake Tracker</a>
+        <a href="https://github.com/OzanTok3/combinia" target="_blank">👗 Combinia</a>
+      </div>
+    </details>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ozan Tok | Powered by GitHub Pages</p>
+  </footer>
+
+  <script>
+    const toggleLang = document.getElementById('languageToggle');
+    const toggleMode = document.getElementById('modeToggle');
+
+    toggleLang.addEventListener('change', () => {
+      const lang = toggleLang.value;
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
     });
-  });
 
-  toggleMode.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-  });
-</script>
+    toggleMode.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
 </body>
 </html>
